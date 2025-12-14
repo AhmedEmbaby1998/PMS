@@ -24,7 +24,6 @@ namespace ServiceTemplate
 
             builder.Services.AddScoped<IUOW, UOW>();
             builder.Services.AddScoped(typeof(IRepo<>), typeof(Repo<>));
-            builder.Services.AddScoped<IMessagePublisher, KafkaMessagePublisher>();
             builder.Services.AddScoped<IIntegrationEventProducer, IntegrationEventQueue>();
             builder.Services.AddScoped<IIntegrationEventQueue, IntegrationEventQueue>();
 
