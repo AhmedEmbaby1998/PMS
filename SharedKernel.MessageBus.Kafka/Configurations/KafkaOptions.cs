@@ -9,22 +9,22 @@ namespace SharedKernel.MessageBus.Kafka.Configurations
 {
     public sealed class KafkaOptions
     {
-        public string BootstrapServers { get; init; } = default!;
-        public string ClientId { get; init; } = default!;
-        public ProducerOptions Producer { get; init; } = new();
-        public ConsumerOptions Consumer { get; init; } = new();
+        public string BootstrapServers { get; set; } = default!;
+        public string ClientId { get; set; } = default!;
+        public ProducerOptions Producer { get; set; } = new();
+        public ConsumerOptions Consumer { get; set; } = new();
     }
 
     public sealed class ProducerOptions
     {
-        public Acks Acks { get; init; } = Acks.All;
-        public int MessageTimeoutMs { get; init; } = 30000;
+        public Acks Acks { get; set; } = Acks.All;
+        public int MessageTimeoutMs { get; set; } = 30000;
     }
 
     public sealed class ConsumerOptions
     {
-        public string GroupId { get; init; } = default!;
-        public bool EnableAutoCommit { get; init; } = false;
-        public AutoOffsetReset AutoOffsetReset { get; init; } = AutoOffsetReset.Earliest;
+        public string GroupId { get; set; } = default!;
+        public bool EnableAutoCommit { get; set; } = false;
+        public AutoOffsetReset AutoOffsetReset { get; set; } = AutoOffsetReset.Earliest;
     }
 }
