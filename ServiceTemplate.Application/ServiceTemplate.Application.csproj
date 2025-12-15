@@ -7,8 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ServiceTemplate.Infrastrcure.Persistent\ServiceTemplate.Infrastrcure.Persistent.csproj" />
     <ProjectReference Include="..\SharedKernel.EventDriven.Abstraction\SharedKernel.EventDriven.Abstraction.csproj" />
+    <ProjectReference Include="..\SharedKernel.Infratsrucrure.Persistent.Abstraction\SharedKernel.Infratsrucrure.Persistent.Abstraction.csproj" />
   </ItemGroup>
 
   <ItemGroup>

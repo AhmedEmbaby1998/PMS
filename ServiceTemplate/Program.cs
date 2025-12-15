@@ -35,7 +35,7 @@ namespace ServiceTemplate
                 {
                     Acks = Confluent.Kafka.Acks.All,
                     MessageTimeoutMs = 30000,
-                    
+
                 };
                 options.Consumer = new ConsumerOptions
                 {
@@ -43,7 +43,10 @@ namespace ServiceTemplate
                     EnableAutoCommit = false,
                     AutoOffsetReset = Confluent.Kafka.AutoOffsetReset.Earliest
                 };
-            });
+            })
+                .AddKafkaConsumer<OrderCreatedEvent, OrderCreatedHandler>()
+                .AddKafkaConsumer<PaymentEvent, PaymentHandler>();
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.

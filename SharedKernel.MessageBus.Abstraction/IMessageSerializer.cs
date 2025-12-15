@@ -6,3 +6,4 @@
         T Deserialize<T>(byte[] bytes);
     }
 }
+
