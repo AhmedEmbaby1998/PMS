@@ -27,5 +27,10 @@ namespace SharedKernel.EventDriven
         {
             return [.. messageQueue];
         }
+
+        public void Reset()
+        {
+            this.messageQueue.Clear();
+        }
     }
 }
